@@ -1,0 +1,2 @@
+serviceClass: aiss.client.MashupService
+path: F0B598091206BB242EDE70D92B6CB208.gwt.rpc

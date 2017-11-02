@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>MashupServlet</servlet-name>
+    <servlet-class>aiss.server.MashupServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>MashupServlet</servlet-name>
+    <url-pattern>/myfirstrestclient/mashup</url-pattern>
+  </servlet-mapping>
+
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- All REST resources will be prefixed by /api  -->
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/api</param-value>
+	</context-param>
+  
+  <!-- Servlet api -->
+  
+  <servlet>
+  	<servlet-name>Resteasy</servlet-name>
+  	<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+  	<init-param>
+  		<param-name>javax.ws.rs.Application</param-name>
+  		<param-value>aiss.api.WCOapi</param-value>
+  	</init-param>
+  </servlet>
+  
+  <!-- Servlet mappings api -->
+  
+  <servlet-mapping>
+  	<servlet-name>Resteasy</servlet-name>
+  	<url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+	<title>WorkCloseOut</title>
+
+	<script type="text/javascript" language="javascript" src="myfirstrestclient/myfirstrestclient.nocache.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  	<div id="container">
+  	<div id="titulo">
+  	<h1>Nuestra API</h1>   
+  	</div>	
+  	<a href="index.html">Inicio</a>
+  	<div id="logo">
+  	<img id="imagen" src="images/logoWCO.png"/>
+  	</div>   
+    <table id="tabla">
+	  <thead>
+	    <tr>
+	      <td><strong>HTTP</strong></td>
+	      <td><strong>Plantilla / URI</strong></td>
+	      <td><strong>Comentarios</strong></td>
+	    </tr>
+	  </thead>
+	  <tbody>
+    <tr>
+      <td><strong>GET</strong></td>
+	  <td><strong>/workcloseout</strong></td>
+	  <td >
+	  		Con esta petición get, obtendrás todas las sesiones creadas en Google Fit por parte de nuestra aplicación.
+	 </td>
+    </tr>
+    <tr>
+		  <td><strong>GET</strong></td>
+		  <td><strong>/workcloseout/{name}/</strong></td>
+		  <td>	
+		  	En este caso, añadiendo también el nombre de la sesión que quiera buscar, obtendrás toda la información sobre esta misma.
+		  </td>
+		</tr>
+		<tr>
+		  <td><strong>POST</strong></td>
+		  <td><strong>/workcloseout</strong></td>
+		  <td> 
+		    Petición de tipo post, con la que conseguiremos añadir una nueva sesión, con las características que queramos.
+		  </td>
+		</tr>
+		<tr>
+		  <td><strong>PUT</strong></td>
+		  <td><strong>/workcloseout/{sessionName}/</strong></td>
+		  <td>
+			Petición de tipo put, con la que podremos modificar una sesión pasandole como parámetro el nombre de la misma.
+		  </td>
+		</tr>
+		<tr>
+		  <td><strong>DELETE</strong></td>
+		  <td><strong>/workcloseout/{sessionName}/</strong></td>
+		  <td>	
+		  	Con esta petición de tipo delete, podrá borrar una sesión existente, pasandole como parámetro su nombre.
+		  </td>
+		</tr>
+  </tbody>
+</table>
+</div>
+  </body>
+</html>

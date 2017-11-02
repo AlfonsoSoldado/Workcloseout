@@ -1,0 +1,3 @@
+# Module myfirstrestclient
+# RPC service class, partial path of RPC policy file
+aiss.client.MashupService, F0B598091206BB242EDE70D92B6CB208.gwt.rpc

@@ -1,0 +1,34 @@
+#logo{
+	align: center;
+}
+
+#imagen {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 30%;
+	width: 30%;
+}
+
+#titulo {
+	text-align: center;
+}
+
+#buscador {
+	align: center;
+	text-align: center;
+}
+
+#container {
+	align: center;
+	text-align: center;
+}
+
+#tabla {
+	align: center;
+	border: solid;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+}
+table 
